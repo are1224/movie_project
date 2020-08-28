@@ -1,9 +1,7 @@
 body {
     display: flex; 
     background-image: url("dolby.jpg");
-    background-size : 120%;
-    background-position : center;
-    
+    background-size: 120%;
 }
 
 /* .img {
@@ -13,9 +11,9 @@ body {
 
 .container {
     font-family: 'Single Day', cursive;
-    align-items: center ;
-    justify-content: center;
-    margin-bottom : 800px;
+   /* align-items: center ;
+    justify-content: center; */
+    margin-top: 200px;
     margin-left: 320px;
     width: 800px;
     height: 100px;
