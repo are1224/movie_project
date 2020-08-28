@@ -1,8 +1,24 @@
-body {
-    display: flex; 
-    background-image: url("dolby.jpg");
-    background-size: 120%;
+html { 
+    background: url("dolby.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
+body { 
+    background: url("dolby.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* body {
+    display : flex;
+    background-image: url("dolby.jpg");
+    background-size : 120%;
+} */
 
 /* .img {
     width: 300px;
@@ -10,6 +26,7 @@ body {
 } */
 
 .container {
+
     font-family: 'Single Day', cursive;
    /* align-items: center ;
     justify-content: center; */
