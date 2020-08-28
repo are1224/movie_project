@@ -1,0 +1,12 @@
+body {
+    background-image: url("dolby2.jpg");
+    background-size: 100%;
+}
+
+.container{
+    color: ivory;
+    margin-top : 5em;
+    margin-left: 20em;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 2em;
+}
