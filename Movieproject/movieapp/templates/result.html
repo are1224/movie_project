@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{input_movie}}와 비슷한 영화 추천</title>
+</head>
+<body>
+    <h2>tfidf 활용 영화 추천</h2>
+    <br/>
+    {% for result in t_result %}
+        <p>{{forloop.counter}}위. {{ result }}</p>
+    {% endfor %}
+
+    <h2>count 활용 영화 추천</h2>
+    <br/>
+    {% for result in c_result %}
+        <p>{{forloop.counter}}위. {{ result }}</p>
+    {% endfor %}
+</body>
+</html>

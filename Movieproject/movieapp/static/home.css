@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    background-image: url("ionman2.jpg");
+}
+
+/* .img {
+    width: 300px;
+    height: 100px;
+} */
+
+.container {
+    align-items: center ;
+    justify-content: center;
+    margin-top: 200px;
+    margin-left: 250px;
+    width: 800px;
+    height: 100px;
+    font-size: 30px;
+}
+.recom {
+    color : darkred;
+    margin-left: 300px;
+}
+
+.button {
+    border-radius: 5px; 
+    font-size : 30px;
+    width: 100px;
+    height: 45px;
+}
+
+.home_css {
+    margin-left: 200px;
+    border-radius: 5px; 
+    font-size : 30px;
+    text-align: center; /* 검색어 중앙부터 입력*/
+    width: 400px;
+    height: 50px;
+    letter-spacing: -1px /* 자간 */ 
+}
+
+   
