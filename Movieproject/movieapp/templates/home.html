@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{% static 'home.css' %}" type="text/css" rel="stylesheet" />
-    <title>장르 활용 영화 추천</title>
+    <link href="{% static 'home1.css' %}" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Single+Day&display=swap" rel="stylesheet">
+
+    <title>Movie</title>
 
 </head>
 <body>
     <!-- <img src="/static/backimg.jpg" /> -->
     <div class="container">
-        <h1 class="recom">영화 입력 </h1>
+        <h1 class="recom">Movie</h1>
         <div class="item">
-            <form action="{% url 'home' %}" method="POST"> {% csrf_token %} 
-                 <input type="text" name="movie_sh" class="home_css">
-                <button type="submit" class="button">입력</button>
+            <form action="{% url 'home' %}" method='post'>{% csrf_token %} 
+                 <input type="text" name="name" class="home_css">
+                <button type="submit" class="button">검색</button>
             </form>
         </div>
     </div>

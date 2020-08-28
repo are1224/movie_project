@@ -1,0 +1,27 @@
+body {
+    background-image: url("dolby2.jpg");
+    background-size: 100%;
+}
+
+
+
+
+.container{
+    justify-content: space-around;
+    display: flex;
+    color: ivory;
+    margin-top : 8em;
+    margin-left: 23em;
+    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Single Day', cursive;
+    font-size: 1.5em;
+}
+
+.box1{
+    margin-left: 50px;
+}   
+
+.box2{
+    margin-right: 10px;
+}   

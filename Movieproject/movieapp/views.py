@@ -7,11 +7,12 @@ def home(request):
 
     if request.method == "POST":
 
-        input_movie = request.POST["movie_sh"]
+        input_movie = request.POST["name"]
 
         return redirect("result", input_movie)
 
     return render(request,'home.html')
+
 
 def result(request, input_movie):
 
