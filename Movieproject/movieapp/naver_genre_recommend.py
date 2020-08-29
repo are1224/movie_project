@@ -49,7 +49,7 @@ def create_tfidf_matrix(movies):
     tfidf_vec = TfidfVectorizer(ngram_range=(1, 2))
     tfidf_matrix = tfidf_vec.fit_transform(movies['genres'])
     # print(tfidf_vec.vocabulary_.items())
-    # 4803은 영화의 개수, 276은 단어의 개수 -> 하나의 영화를 276개 열을 가진 벡터로 표현
+    # 120은 영화의 개수, 74은 단어의 개수 -> 하나의 영화를 74개 열을 가진 벡터로 표현
     
     return tfidf_matrix
 
@@ -61,20 +61,23 @@ def create_tfidf_matrix(movies):
 """# Count (빈도수)"""
 
 def create_count_matrix(movies):
+    # ngram_range=(1, 2) 는 단어를 1개 혹은 2개 연속으로 보겠다
     count_vec = CountVectorizer(ngram_range=(1, 2))
     count_matrix = count_vec.fit_transform(movies['genres'])
+    # print(count_vec.vocabulary_.items())
+    # 120은 영화의 개수, 74은 단어의 개수 -> 하나의 영화를 74개 열을 가진 벡터로 표현
     return count_matrix   
 
 def calculate_similarity(matrix):
-    # 유사도 행렬 (4803, 4803)
+    # 유사도 행렬 (120, 120)
     # 1, 1 (1번째 영화와 1번재 영화의 유사도)
-    # 1, 1 / 1, 2 / .... / 1, 4803 -> 1번째 영화와 1~4803번재 영화의 유사도
-    # 2, 1 / 2, 2 / .... / 2, 4803 -> 2번째 영화와 1~4803번째 영화의 유사도
+    # 1, 1 / 1, 2 / .... / 1, 120 -> 1번째 영화와 1~120번재 영화의 유사도
+    # 2, 1 / 2, 2 / .... / 2, 120 -> 2번째 영화와 1~120번째 영화의 유사도
     # ....
-    # 4803, 1 / 4803, 2 / .... / 4803, 4803 -> 4803번째 영화와 1~4803번째 영화의 유사도
+    # 120, 1 / 120, 2 / .... / 120, 120 -> 120번째 영화와 1~120번째 영화의 유사도
 
 
-    # 4803개의 영화랑 4803개의 영화끼리 유사도를 구하겠다!
+    # 120개의 영화랑 120개의 영화끼리 유사도를 구하겠다!
     # 자신과의 유사도는 1
     genres_similarity = cosine_similarity(matrix, matrix)
     # 유사도 값이 높은 영화의 제목
@@ -95,4 +98,4 @@ def find_similar_movies(movies, similar_index, input_movie):
 
     return movies.iloc[similar_movies_index]['title']
 
-############시범용 
+
